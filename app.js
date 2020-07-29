@@ -12,28 +12,14 @@ function calculateResults(e) {
     const totalPayments = document.getElementById('total-payments');
     const totalInterest = document.getElementById('total-interest');
 
-    const p = amount.value;
-    const n = years.value;
-    const r = (interest.value) / 100 / 12;
-
-    const x = Math.pow((1 + r), (n * 12));
-
-    
-
-    const monthlyPayments = (p * (r * x)) / (x - 1);
+    const principal = parseFloat(amount.value);
+    const calculatedInterest = parseFloat(interest.value) / 100 / 12;
+    const calculatedPayments = parseFloat(years.value) * 12;
 
 
-    
 
-
-    const totalPayments = (monthlyPayments * (n * 12));
-
-   
-
-
-    const totalInterest = totalPayments - p;
-
-
+    const x = Math.pow((1 + calculatedInterest), calculatedPayments);
+    const monthly = (principal * (calculatedInterest * x)) / (x - 1);
     
 
 
@@ -41,13 +27,13 @@ function calculateResults(e) {
 
 
     if (isFinite) {
-    monthlyPayments.value
-    totalPayments.value
-    totalInterest.value
+        monthlyPayments.value = monthly.toFixed(2);
+        totalPayments.value = (monthly * calculatedPayments).toFixed(2);
+        totalInterest.value = ((monthly * calculatedPayments) - principal).toFixed(2);
         
     } else {
         // error message
-        setTimeout(Showerror(error), 3000);
+        Showerror();
     }
 
 
