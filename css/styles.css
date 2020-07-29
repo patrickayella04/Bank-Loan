@@ -2,5 +2,35 @@
     box-sizing: border-box;
 }
 body {
-    background-color: darkorange;
+    background-color: #eec088;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+#loan-form, .results {
+    text-align: center;
+}
+.heading, .results-heading, .calc-btn {
+    color: #ffffff;
+    background-color: #9932cc;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px 0 #808080;
+    margin: auto;
+}
+.input-group, .form-group, input {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+input {
+    background-color: linen;
+}
+
+.calc-btn {
+    color: #deecec;
+    background-color: rgba(0, 255, 0, 0.274);
 }

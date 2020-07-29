@@ -17,14 +17,9 @@ function calculateResults(e) {
     const calculatedPayments = parseFloat(years.value) * 12;
 
 
-
     const x = Math.pow((1 + calculatedInterest), calculatedPayments);
     const monthly = (principal * (calculatedInterest * x)) / (x - 1);
     
-
-
-    
-
 
     if (isFinite(monthly)) {
         monthlyPayments.value = monthly.toFixed(2);
