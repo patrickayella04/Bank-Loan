@@ -9,7 +9,7 @@ body {
     justify-content: center;
     padding: 50px;
 }
-#loan-form, .results {
+#loan-form, .results, #loading {
     text-align: center;
 }
 .heading, .results-heading, .calc-btn {
@@ -21,7 +21,7 @@ body {
     box-shadow: 0 5px 10px 0 #808080;
     margin: auto;
 }
-.input-group, .form-group, input {
+.input-group, .form-group, input, .alert {
     padding: 5px;
     border-radius: 5px;
 }
@@ -33,4 +33,15 @@ input {
 .calc-btn {
     color: #deecec;
     background-color: rgba(0, 255, 0, 0.274);
+}
+
+.results, #loading {
+    display: none;
+}
+
+.alert {
+    background-color: #ff0000;
+    color: #ffffff;
+    text-align: center;
+    margin: 10px;
 }
